@@ -34,7 +34,7 @@ describe(@"SCUserProfile", ^{
             loggedUser = [SCUser currentUser];
         }];
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
+        [[_error should] beNil];
         [[loggedUser.profile.owner should] equal:loggedUser.userId];
         [loggedUser logout];
     });

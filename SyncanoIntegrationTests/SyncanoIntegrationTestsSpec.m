@@ -33,9 +33,9 @@ describe(@"Syncano", ^{
                 _blockFinished = YES;
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[[Syncano getApiKey] shouldEventually] equal:apiKey];
-            [[[Syncano getInstanceName] shouldEventually] equal:instanceName];
+            [[_error should] beNil];
+            [[[Syncano getApiKey] should] equal:apiKey];
+            [[[Syncano getInstanceName] should] equal:instanceName];
             
         });
     });

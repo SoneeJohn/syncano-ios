@@ -42,8 +42,8 @@ describe(@"User login", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventuallyBeforeTimingOutAfter(10.0)] beYes];
-            [[[SCUser currentUser] shouldNotEventually] beNil];
-            [[_error shouldEventually] beNil];
+            [[[SCUser currentUser] shouldNot] beNil];
+            [[_error should] beNil];
             
         }
     };

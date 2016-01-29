@@ -50,8 +50,8 @@ describe(@"SCUser", ^{
                 
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[registereddUser shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[registereddUser should] beNonNil];
         });
         
         
@@ -76,10 +76,10 @@ describe(@"SCUser", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[loggedUser shouldEventually] beNonNil];
-            [[[loggedUser userKey] shouldEventually] beNonNil];
-            [[[loggedUser username] shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[loggedUser should] beNonNil];
+            [[[loggedUser userKey] should] beNonNil];
+            [[[loggedUser username] should] beNonNil];
             
             //Log out
             [loggedUser logout];
@@ -113,9 +113,9 @@ describe(@"SCUser", ^{
             
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[loggedUser shouldEventually] beNonNil];
-            [[loggedUser.username shouldEventually] equal:@"marek"];
+            [[_error should] beNil];
+            [[loggedUser should] beNonNil];
+            [[loggedUser.username should] equal:@"marek"];
         });
         
         it(@"should update password", ^{
@@ -145,7 +145,7 @@ describe(@"SCUser", ^{
             
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
+            [[_error should] beNil];
         });
 
         it(@"should return SCPlease instance", ^{
@@ -185,8 +185,8 @@ describe(@"SCUser", ^{
 
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[registereddUser shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[registereddUser should] beNonNil];
         });
         
         
@@ -211,10 +211,10 @@ describe(@"SCUser", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[loggedUser shouldEventually] beNonNil];
-            [[[loggedUser userKey] shouldEventually] beNonNil];
-            [[[loggedUser username] shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[loggedUser should] beNonNil];
+            [[[loggedUser userKey] should] beNonNil];
+            [[[loggedUser username] should] beNonNil];
             
             //Log out
             [loggedUser logout];
@@ -248,9 +248,9 @@ describe(@"SCUser", ^{
             
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[loggedUser shouldEventually] beNonNil];
-            [[loggedUser.username shouldEventually] equal:@"marek"];
+            [[_error should] beNil];
+            [[loggedUser should] beNonNil];
+            [[loggedUser.username should] equal:@"marek"];
         });
 
         it(@"should update password", ^{
@@ -280,7 +280,7 @@ describe(@"SCUser", ^{
             
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
+            [[_error should] beNil];
         });
 
         it(@"should return SCPlease instance", ^{

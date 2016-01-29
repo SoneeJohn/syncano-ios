@@ -109,8 +109,8 @@ describe(@"SCChannel", ^{
                 
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[_notificationMessage.identifier shouldEventually] equal:@1];
+            [[_error should] beNil];
+            [[_notificationMessage.identifier should] equal:@1];
         });
         
         context(@"custom Syncano instance", ^{
@@ -148,8 +148,8 @@ describe(@"SCChannel", ^{
                     
                 }];
                 [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-                [[_error shouldEventually] beNil];
-                [[_notificationMessage.identifier shouldEventually] equal:@1];
+                [[_error should] beNil];
+                [[_notificationMessage.identifier should] equal:@1];
             });
         });
     });

@@ -58,7 +58,7 @@ describe(@"SCAPIClient", ^{
                     _blockFinished = YES;
                 }];
                 [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-                [[_error shouldEventually] beNil];
+                [[_error should] beNil];
                 [[apiClient.requestSerializer.HTTPRequestHeaders[@"X-API-KEY"] should] equal:@"API-KEY"];
                 [[task.currentRequest.HTTPMethod should] equal:@"GET"];
                 [[task.currentRequest.URL should] equal:url];
@@ -75,7 +75,7 @@ describe(@"SCAPIClient", ^{
                     _blockFinished = YES;
                 }];
                 [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-                [[_error shouldEventually] beNil];
+                [[_error should] beNil];
                 [[apiClient.requestSerializer.HTTPRequestHeaders[@"X-API-KEY"] should] equal:@"API-KEY"];
                 [[task.currentRequest.HTTPMethod should] equal:@"POST"];
                 [[task.currentRequest.URL should] equal:url];
@@ -95,7 +95,7 @@ describe(@"SCAPIClient", ^{
                     _blockFinished = YES;
                 }];
                 [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-                [[_error shouldEventually] beNil];
+                [[_error should] beNil];
                 [[apiClient.requestSerializer.HTTPRequestHeaders[@"X-API-KEY"] should] equal:@"API-KEY"];
                 [[task.currentRequest.HTTPMethod should] equal:@"PUT"];
                 [[task.currentRequest.URL should] equal:url];
@@ -115,7 +115,7 @@ describe(@"SCAPIClient", ^{
                     _blockFinished = YES;
                 }];
                 [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-                [[_error shouldEventually] beNil];
+                [[_error should] beNil];
                 [[apiClient.requestSerializer.HTTPRequestHeaders[@"X-API-KEY"] should] equal:@"API-KEY"];
                 [[task.currentRequest.HTTPMethod should] equal:@"PATCH"];
                 [[task.currentRequest.URL should] equal:url];
@@ -135,7 +135,7 @@ describe(@"SCAPIClient", ^{
                     _blockFinished = YES;
                 }];
                 [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-                [[_error shouldEventually] beNil];
+                [[_error should] beNil];
                 [[apiClient.requestSerializer.HTTPRequestHeaders[@"X-API-KEY"] should] equal:@"API-KEY"];
                 [[task.currentRequest.HTTPMethod should] equal:@"DELETE"];
                 [[task.currentRequest.URL should] equal:url];
@@ -162,12 +162,12 @@ describe(@"SCAPIClient", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
+            [[_error should] beNil];
             
             NSData *reference = [NSData dataWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"syncano-white" ofType:@"png"]];
             
-            [[_responseobject shouldEventually] beKindOfClass:[NSData class]];
-            [[_responseobject shouldEventually] equal:reference];
+            [[_responseobject should] beKindOfClass:[NSData class]];
+            [[_responseobject should] equal:reference];
         });
     });
     
@@ -192,11 +192,11 @@ describe(@"SCAPIClient", ^{
                 _blockFinished = YES;
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
+            [[_error should] beNil];
             [[task.currentRequest.HTTPMethod should] equal:@"GET"];
             [[task.currentRequest.URL should] equal:url];
             [[task.currentRequest.allHTTPHeaderFields[@"X-API-KEY"] should] equal:@"API-KEY"];
-            [[_responseobject[@"objects"] shouldEventually] beKindOfClass:[NSArray class]];
+            [[_responseobject[@"objects"] should] beKindOfClass:[NSArray class]];
        });
         
         it(@"should get data object for class with name and with id", ^{
@@ -217,11 +217,11 @@ describe(@"SCAPIClient", ^{
                 _blockFinished = YES;
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
+            [[_error should] beNil];
             [[task.currentRequest.HTTPMethod should] equal:@"GET"];
             [[task.currentRequest.URL should] equal:url];
             [[task.currentRequest.allHTTPHeaderFields[@"X-API-KEY"] should] equal:@"API-KEY"];
-            [[_responseobject shouldEventually] beNonNil];
+            [[_responseobject should] beNonNil];
         });
     });
     

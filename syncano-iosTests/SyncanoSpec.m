@@ -41,9 +41,9 @@ describe(@"Syncano", ^{
                     _blockFinished = YES;
                 }];
                 [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-                [[_error shouldEventually] beNil];
-                [[[Syncano getApiKey] shouldEventually] equal:@"API-KEY"];
-                [[[Syncano getInstanceName] shouldEventually] equal:@"INSTANCE-NAME"];
+                [[_error should] beNil];
+                [[[Syncano getApiKey] should] equal:@"API-KEY"];
+                [[[Syncano getInstanceName] should] equal:@"INSTANCE-NAME"];
 
             });
          });
@@ -75,9 +75,9 @@ describe(@"Syncano", ^{
                     _blockFinished = YES;
                 }];
                 [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-                [[_error shouldEventually] beNil];
-                [[syncano.apiKey shouldEventually] equal:@"API-KEY"];
-                [[syncano.instanceName shouldEventually] equal:@"INSTANCE-NAME"];
+                [[_error should] beNil];
+                [[syncano.apiKey should] equal:@"API-KEY"];
+                [[syncano.instanceName should] equal:@"INSTANCE-NAME"];
                 
             });
         });

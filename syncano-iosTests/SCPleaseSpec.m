@@ -67,9 +67,9 @@ describe(@"SCPlease", ^{
             books = objects;
         }];
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
-        [[books shouldNotEventually] beNil];
-        [[[books firstObject] shouldEventually] beKindOfClass:[Book class]];
+        [[_error should] beNil];
+        [[books shouldNot] beNil];
+        [[[books firstObject] should] beKindOfClass:[Book class]];
     });
         
     it(@"should fetch objects from API with parameters", ^{
@@ -89,9 +89,9 @@ describe(@"SCPlease", ^{
             books = objects;
         }];
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
-        [[books shouldNotEventually] beNil];
-        [[[books firstObject] shouldEventually] beKindOfClass:[Book class]];
+        [[_error should] beNil];
+        [[books shouldNot] beNil];
+        [[[books firstObject] should] beKindOfClass:[Book class]];
     });
     
     it(@"should fetch objects from API with predicate and parameters", ^{
@@ -112,9 +112,9 @@ describe(@"SCPlease", ^{
             books = objects;
         }];
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
-        [[books shouldNotEventually] beNil];
-        [[[books firstObject] shouldEventually] beKindOfClass:[Book class]];
+        [[_error should] beNil];
+        [[books shouldNot] beNil];
+        [[[books firstObject] should] beKindOfClass:[Book class]];
     });
     
     it(@"should fetch next page of objects from API", ^{
@@ -133,9 +133,9 @@ describe(@"SCPlease", ^{
             books = objects;
         }];
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
-        [[books shouldNotEventually] beNil];
-        [[[books firstObject] shouldEventually] beKindOfClass:[Book class]];
+        [[_error should] beNil];
+        [[books shouldNot] beNil];
+        [[[books firstObject] should] beKindOfClass:[Book class]];
     });
     
     it(@"should fetch previous page of objects from API", ^{
@@ -154,9 +154,9 @@ describe(@"SCPlease", ^{
             books = objects;
         }];
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
-        [[books shouldNotEventually] beNil];
-        [[[books firstObject] shouldEventually] beKindOfClass:[Book class]];
+        [[_error should] beNil];
+        [[books shouldNot] beNil];
+        [[[books firstObject] should] beKindOfClass:[Book class]];
     });
     
 });

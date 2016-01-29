@@ -36,8 +36,8 @@ describe(@"SCWebhook", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[_responseObject shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[_responseObject should] beNonNil];
         });
         
         it(@"should run webhook with name and payload", ^{
@@ -62,8 +62,8 @@ describe(@"SCWebhook", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[_responseObject shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[_responseObject should] beNonNil];
             [[_responseObject.result[@"stdout"] should] equal:@"Killed Manticore"];
         });
  
@@ -85,8 +85,8 @@ describe(@"SCWebhook", ^{
                 _blockFinished = YES;
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[_responseObject shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[_responseObject should] beNonNil];
             NSString* responseString = [[NSString alloc] initWithData:_responseObject encoding:NSUTF8StringEncoding];
             [[responseString should] equal:@"It works!"];
             [[[Syncano sharedAPIClient].responseSerializer should] beIdenticalTo:responseSerializer];
@@ -117,8 +117,8 @@ describe(@"SCWebhook", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[_responseObject shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[_responseObject should] beNonNil];
 
         });
         
@@ -144,8 +144,8 @@ describe(@"SCWebhook", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[_responseObject shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[_responseObject should] beNonNil];
             [[_responseObject.result[@"stdout"] should] equal:@"Killed Manticore"];
         });
         
@@ -167,8 +167,8 @@ describe(@"SCWebhook", ^{
                 _blockFinished = YES;
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[_responseObject shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[_responseObject should] beNonNil];
             NSString* responseString = _responseObject[@"status"];
             [[responseString should] equal:@"pending"];
             
@@ -193,8 +193,8 @@ describe(@"SCWebhook", ^{
         }];
         
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
-        [[_responseObject shouldEventually] beNonNil];
+        [[_error should] beNil];
+        [[_responseObject should] beNonNil];
         [[_responseObject.result[@"stdout"] should] equal:@"Killed Manticore"];
 
     });
@@ -218,8 +218,8 @@ describe(@"SCWebhook", ^{
         }];
         
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
-        [[_responseObject shouldEventually] beNonNil];
+        [[_error should] beNil];
+        [[_responseObject should] beNonNil];
         NSString* responseString = [[NSString alloc] initWithData:_responseObject encoding:NSUTF8StringEncoding];
         [[responseString should] equal:@"It works!"];
         [[[Syncano sharedAPIClient].responseSerializer should] beIdenticalTo:responseSerializer];

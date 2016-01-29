@@ -50,8 +50,8 @@ describe(@"SCTrace", ^{
         }];
         
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
-        [[_trace shouldEventually] beNonNil];
+        [[_error should] beNil];
+        [[_trace should] beNonNil];
     });
     
     it(@"should fetch from provided Syncano instance", ^{
@@ -77,8 +77,8 @@ describe(@"SCTrace", ^{
         }];
         
         [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-        [[_error shouldEventually] beNil];
-        [[_trace shouldEventually] beNonNil];
+        [[_error should] beNil];
+        [[_trace should] beNonNil];
     });
 });
 

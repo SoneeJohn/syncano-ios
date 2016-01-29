@@ -64,8 +64,8 @@ describe(@"SCDataObject", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[book.objectId shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[book.objectId should] beNonNil];
         });
         
         it(@"should fetch object", ^{
@@ -87,10 +87,10 @@ describe(@"SCDataObject", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[book.objectId shouldEventually] equal:@2];
-            [[book.numOfPages shouldEventually] equal:@123];
-            [[book.title shouldEventually] equal:@"googlebook"];
+            [[_error should] beNil];
+            [[book.objectId should] equal:@2];
+            [[book.numOfPages should] equal:@123];
+            [[book.title should] equal:@"googlebook"];
         });
         
         it(@"should delete object on server", ^{
@@ -111,7 +111,7 @@ describe(@"SCDataObject", ^{
                 _blockFinished = YES;
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
+            [[_error should] beNil];
         });
         
         it(@"should update value for provided key", ^{
@@ -132,8 +132,8 @@ describe(@"SCDataObject", ^{
                 _blockFinished = YES;
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[book.title shouldEventually] equal:@"NEW-TITLE"];
+            [[_error should] beNil];
+            [[book.title should] equal:@"NEW-TITLE"];
         });
     
     });
@@ -159,8 +159,8 @@ describe(@"SCDataObject", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[book.objectId shouldEventually] beNonNil];
+            [[_error should] beNil];
+            [[book.objectId should] beNonNil];
         });
         
         it(@"should fetch object", ^{
@@ -182,10 +182,10 @@ describe(@"SCDataObject", ^{
             }];
             
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[book.objectId shouldEventually] equal:@2];
-            [[book.numOfPages shouldEventually] equal:@123];
-            [[book.title shouldEventually] equal:@"googlebook"];
+            [[_error should] beNil];
+            [[book.objectId should] equal:@2];
+            [[book.numOfPages should] equal:@123];
+            [[book.title should] equal:@"googlebook"];
         });
         
         it(@"should delete object on server", ^{
@@ -206,7 +206,7 @@ describe(@"SCDataObject", ^{
                 _blockFinished = YES;
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
+            [[_error should] beNil];
         });
         
         it(@"should update value for provided key", ^{
@@ -227,8 +227,8 @@ describe(@"SCDataObject", ^{
                 _blockFinished = YES;
             }];
             [[expectFutureValue(theValue(_blockFinished)) shouldEventually] beYes];
-            [[_error shouldEventually] beNil];
-            [[book.title shouldEventually] equal:@"NEW-TITLE"];
+            [[_error should] beNil];
+            [[book.title should] equal:@"NEW-TITLE"];
         });
         
     });
